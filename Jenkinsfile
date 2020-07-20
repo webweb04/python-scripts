@@ -1,6 +1,6 @@
 node {
     stage "Create build output"
-    
+    git 'https://github.com/webweb04/python-scripts.git'
     // Make the output directory.
     sh "mkdir -p output"
     
