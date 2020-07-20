@@ -8,7 +8,7 @@ node {
 
     
     
-    
+    sh "pwd"
     
     
     // Write an useful file, which is needed to be archived.
