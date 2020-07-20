@@ -1,10 +1,5 @@
-
-pipeline {
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                
+node {  
+    stage('Build') { 
                 echo "checkout from SCM"
                 
                 git 'https://github.com/webweb04/python-scripts.git'
@@ -30,17 +25,11 @@ pipeline {
 
                 // Archive the build output artifacts.
                 archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
-            }
-        }
-        stage('Test') { 
-            steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-        }
+    }
+    stage('Test') { 
+        // 
+    }
+    stage('Deploy') { 
+        // 
     }
 }
